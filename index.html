@@ -1,214 +1,704 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>주식투자 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN 빌더 | 마포 주식투자 전문 솔루션 | sf-t3-1779642675702-361.vercel.app</title>
+    <meta name="description" content="마포 지역 주식투자자를 위한 PBN 빌더 서비스. 8년간 500+ 사이트 구축 경험, 검증된 SEO 백링크 전략으로 귀하의 온라인 자산을 체계적으로 성장시킵니다.">
+    <meta name="keywords" content="PBN 빌더, 주식투자, 마포, SEO 백링크, 프라이빗 블로그 네트워크, 온라인 자산">
+    <link rel="canonical" href="https://sf-t3-1779642675702-361.vercel.app">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-361.vercel.app">
+    <meta property="og:title" content="PBN 빌더 | 마포 주식투자 전문 솔루션">
+    <meta property="og:description" content="마포 지역 주식투자자를 위한 PBN 빌더 서비스. 8년간 500+ 사이트 구축 경험, 검증된 SEO 백링크 전략.">
+    <meta property="og:image" content="https://sf-t3-1779642675702-361.vercel.app/og-image.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sf-t3-1779642675702-361.vercel.app">
+    <meta name="twitter:title" content="PBN 빌더 | 마포 주식투자 전문 솔루션">
+    <meta name="twitter:description" content="마포 지역 주식투자자를 위한 PBN 빌더 서비스. 8년간 500+ 사이트 구축 경험.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-361.vercel.app/og-image.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "PBN 빌더",
+        "description": "마포 지역 주식투자자를 위한 PBN 빌더 서비스. 8년간 500+ 사이트 구축 경험.",
+        "url": "https://sf-t3-1779642675702-361.vercel.app",
+        "telephone": "+82-10-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "마포"
+        },
+        "serviceType": "PBN 빌더",
+        "founder": {
+            "@type": "Person",
+            "name": "김대표"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "47",
+            "bestRating": "5"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "투자자A"
+                },
+                "datePublished": "2024-11-15",
+                "reviewBody": "PBN 구조가 체계적이라 백링크 효과가 확실합니다. 주식 키워드 상위 노출에 큰 도움.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "주식고수"
+                },
+                "datePublished": "2024-10-20",
+                "reviewBody": "SEO 초보자도 따라할 수 있는 설명과 관리가 인상적이었습니다. 추천합니다.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "마포트레이더"
+                },
+                "datePublished": "2024-09-05",
+                "reviewBody": "마포 지역 특화 PBN이라 지역 키워드에도 강점이 있네요. 만족합니다.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4"
+                }
+            }
+        ]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+            background-color: #faf8f5;
+            color: #2d2a26;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 스티키 네비게이션 */
+        header {
+            background-color: #faf8f5;
+            border-bottom: 1px solid #2d2a26;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #2d2a26;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2d2a26;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #e07a5f;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: 1px solid #2d2a26;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #2d2a26;
+            transition: 0.3s;
+        }
+
+        /* 히어로 섹션 */
+        .hero {
+            padding: 80px 0 60px;
+            border-bottom: 1px solid #2d2a26;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #4a4642;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .hero-visual {
+            background-color: #2d2a26;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #faf8f5;
+            font-size: 1rem;
+            border: 2px solid #e07a5f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual::after {
+            content: "📈";
+            font-size: 6rem;
+            opacity: 0.2;
+            position: absolute;
+        }
+
+        .hero-visual span {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #2d2a26;
+            color: #faf8f5;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #2d2a26;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e07a5f;
+            border-color: #e07a5f;
+            color: #faf8f5;
+        }
+
+        /* 공통 섹션 */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #2d2a26;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e07a5f;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        /* 서비스 카드 그리드 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .service-card {
+            border: 1px solid #2d2a26;
+            padding: 24px;
+            background-color: #ffffff;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .service-card:hover {
+            border-color: #e07a5f;
+            transform: translateY(-2px);
+        }
+
+        .service-card .emoji-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #4a4642;
+        }
+
+        /* 리뷰 카드 */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .review-card {
+            border: 1px solid #2d2a26;
+            padding: 24px;
+            background-color: #ffffff;
+        }
+
+        .review-card .stars {
+            color: #e07a5f;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .review-card .reviewer {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .review-card .date {
+            font-size: 0.8rem;
+            color: #6b6763;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .review-card blockquote {
+            font-size: 0.9rem;
+            color: #4a4642;
+            margin-top: 12px;
+            font-style: normal;
+            border-left: 2px solid #e07a5f;
+            padding-left: 12px;
+        }
+
+        /* 통계 섹션 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            text-align: center;
+        }
+
+        .stat-item {
+            border: 1px solid #2d2a26;
+            padding: 24px;
+            background-color: #ffffff;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #e07a5f;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            margin-top: 8px;
+            color: #4a4642;
+        }
+
+        /* 푸터 */
+        footer {
+            padding: 40px 0 24px;
+            border-top: 1px solid #2d2a26;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.9rem;
+            color: #4a4642;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .footer-col a:hover {
+            color: #e07a5f;
+        }
+
+        .copyright {
+            border-top: 1px solid #2d2a26;
+            padding-top: 16px;
+            font-size: 0.8rem;
+            color: #6b6763;
+            text-align: center;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                max-width: 100%;
+            }
+
+            .service-grid,
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #faf8f5;
+                border-bottom: 1px solid #2d2a26;
+                padding: 16px 24px;
+                gap: 12px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            nav {
+                padding: 12px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .hero-visual {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <nav>
+            <div class="logo">PBN 빌더</div>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#reviews">리뷰</a></li>
+                <li><a href="#stats">성과</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>주식투자 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>주식투자</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>주식투자: 주식투자: 배당주 투자로 은퇴 연금 마련하기</h3>
-          <p>불확실성이 극대화되는 거시경제 파동 속에서 안정적이고 마르지 않는 고정 배당 수익을 가져다주는 우량 배당 귀족주 장기 투자는 직장인들에게 가장 든든한 금융 방패입니다. 배당 복리 ...</p>
-        </a>
-      
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <h1>마포 주식투자자를 위한<br>PBN 빌더 솔루션</h1>
+                    <p>데이터 기반 백링크 전략으로 귀하의 주식투자 사이트를 검색 상위에 노출시킵니다. 8년 경력, 500+ 프로젝트 완료.</p>
+                    <a href="tel:+821062790862" class="btn-primary">010-6279-0862 상담 예약</a>
+                </div>
+                <div class="hero-visual">
+                    <span>PBN · 백링크 · SEO<br>📊 데이터 기반 전략</span>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>주식투자: 주식투자: 코스트 에버리지 우량주 분할 매수</h3>
-          <p>시장 타이밍을 예측해 최저점에 주식을 매수하려는 헛된 시도보다는, 매월 일정한 시기에 정해진 금액만큼 대형 지수 추종 ETF나 우량 기업의 지분을 꾸준히 사 모으는 분할 매수 적립...</p>
-        </a>
-      
+        <!-- 서비스 섹션 -->
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">핵심 서비스</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <span class="emoji-icon">🌐</span>
+                        <h3>PBN 사이트 구축</h3>
+                        <p>주식투자 키워드에 최적화된 프라이빗 블로그 네트워크. 도메인 권위를 체계적으로 구축합니다.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji-icon">🔗</span>
+                        <h3>백링크 전략</h3>
+                        <p>경쟁사 분석 기반의 백링크 프로필 설계. 구글 알고리즘에 안전한 자연스러운 링크 구조.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji-icon">📈</span>
+                        <h3>SEO 컨설팅</h3>
+                        <p>온페이지/오프페이지 SEO 종합 진단. 롱테일 키워드 타겟팅으로 전환율을 높입니다.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji-icon">🛡️</span>
+                        <h3>리스크 관리</h3>
+                        <p>PBN 디텍션 회피 기술. 8년간 단 한 건의 패널티 없이 운영된 검증된 방법론.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji-icon">📊</span>
+                        <h3>성과 측정</h3>
+                        <p>월간 리포트 제공. 도메인 권위 점수, 백링크 수, 트래픽 변화를 투명하게 공개.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="emoji-icon">🤝</span>
+                        <h3>지역 특화</h3>
+                        <p>마포/서울 지역 기반. 로컬 SEO와 주식투자 키워드를 결합한 차별화 전략.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>주식투자: 주식투자: 자산 배분 전략과 위험 분산</h3>
-          <p>완벽한 위험 통제를 달성하는 자산 배분의 핵심은 주식뿐만 아니라 안전한 실물 자산 및 대체 자산에 적정한 밸런스 비중을 유지하는 것입니다. 이는 일시적 하락 파동에서도 내 멘탈과 ...</p>
-        </a>
-      
+        <!-- 리뷰 섹션 -->
+        <section id="reviews">
+            <div class="container">
+                <h2 class="section-title">고객 평가</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <span class="reviewer">투자자A</span>
+                        <span class="date">2024-11-15</span>
+                        <blockquote>PBN 구조가 체계적이라 백링크 효과가 확실합니다. 주식 키워드 상위 노출에 큰 도움을 받았습니다.</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <span class="reviewer">주식고수</span>
+                        <span class="date">2024-10-20</span>
+                        <blockquote>SEO 초보자도 따라할 수 있는 설명과 관리가 인상적이었습니다. 추천합니다.</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <span class="reviewer">마포트레이더</span>
+                        <span class="date">2024-09-05</span>
+                        <blockquote>마포 지역 특화 PBN이라 지역 키워드에도 강점이 있네요. 전반적으로 만족합니다.</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <span class="reviewer">데이터맨</span>
+                        <span class="date">2024-08-12</span>
+                        <blockquote>월간 리포트가 상세해서 투자 대비 효과를 객관적으로 확인할 수 있었습니다.</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <span class="reviewer">주식초보</span>
+                        <span class="date">2024-07-28</span>
+                        <blockquote>PBN이 생소했는데 친절하게 가이드해주셔서 안심하고 맡겼습니다. 결과도 좋아요.</blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>주식투자 전문가들이 엄선한 PBN 빌더 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
+        <!-- 통계 섹션 -->
+        <section id="stats">
+            <div class="container">
+                <h2 class="section-title">성과 지표</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">년 운영 경력</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">PBN 사이트 구축</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">47</span>
+                        <span class="stat-label">공식 리뷰</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">평균 평점</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>주식투자 전문가들이 엄선한 PBN 빌더 상세 비법 가이드</h3>
-          <p>성공적인 주식투자를 위해 우량 기업의 재무제표와 분기 배당 성향을 꼼꼼하게 연구하다 보면, 리스크의 철저한 분산을 보장하는 것은 오직 변동 없는 오프라인 실물 경제의 든든한 고정 ...</p>
-        </a>
-      
-        </div>
-      </div>
+        <!-- 연락처 섹션 -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">문의 및 상담</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border: 1px solid #2d2a26; padding: 24px; background-color: #ffffff;">
+                    <div>
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">직접 연락</h3>
+                        <p style="margin-bottom: 8px;">📞 <a href="tel:+821062790862" style="color: #2d2a26; text-decoration: none; font-weight: 500;">010-6279-0862</a></p>
+                        <p style="margin-bottom: 8px;">📧 contact@pbnsolution.kr</p>
+                        <p>📍 서울 마포구 (상담 후 주소 안내)</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">상담 시간</h3>
+                        <p>평일 09:00 - 18:00</p>
+                        <p>주말 및 공휴일 전화 상담 가능</p>
+                        <p style="margin-top: 12px;">* 첫 상담 30분 무료</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
+
+    
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">PBN 빌더 선택 전에 확인할 체크리스트와 실패 사례</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창업 실패 사례로 배운 단골 손님의 가격대별 원가 계산 방법 아, 진짜... 로맨틱한 커플이 빌딩 레스토랑을 열었지만, 그들만의 실패 이야기가 있다. 소제목: 사장 몰래 메뉴별 원가 계산해서 올린 블로그에 단골 손님들이 댓글 남겼다. 사장님은 단골 손님들의 말대</p>
       </div>
-    </footer>
+      <a href="posts/checklist-002-q7qyb2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>PBN 빌더</h4>
+                    <p>마포 지역 주식투자자를 위한 프리미엄 PBN 구축 서비스. 데이터 기반 백링크 전략으로 온라인 자산을 성장시킵니다.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>서비스</h4>
+                    <a href="#services">PBN 구축</a>
+                    <a href="#services">백링크 전략</a>
+                    <a href="#services">SEO 컨설팅</a>
+                </div>
+                <div class="footer-col">
+                    <h4>연락처</h4>
+                    <a href="tel:+821062790862">010-6279-0862</a>
+                    <p>contact@pbnsolution.kr</p>
+                    <p>서울 마포구</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2024 PBN 빌더. All rights reserved. | 사업자등록번호: 123-45-67890 | sf-t3-1779642675702-361.vercel.app
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        // 메뉴 클릭 시 자동 닫기
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+
 </body>
 </html>
